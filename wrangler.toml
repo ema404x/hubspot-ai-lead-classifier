@@ -1,0 +1,12 @@
+name = "hubspot-ai-lead-classifier"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Secrets (set with `npx wrangler secret put <NAME>`, never commit them):
+#   HUBSPOT_ACCESS_TOKEN  - HubSpot app access token (crm.objects.contacts.read/write, crm.schemas.contacts.write)
+#   HUBSPOT_CLIENT_SECRET - HubSpot app client secret, used to verify webhook signatures
+#   ANTHROPIC_API_KEY     - Claude API key
+
+[observability]
+enabled = true

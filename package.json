@@ -1,0 +1,25 @@
+{
+  "name": "hubspot-ai-lead-classifier",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "setup:properties": "tsx --env-file=.dev.vars scripts/setup-properties.ts",
+    "seed": "tsx --env-file=.dev.vars scripts/seed-contacts.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261102.1",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5",
+    "wrangler": "^4.156.1"
+  }
+}
